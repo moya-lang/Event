@@ -11,7 +11,7 @@ has occurred.
 
 ## Usage
 
-The Event class mimics WINAPI Event Objects with use of C++11 features. For those familiar with WINAPI evets the list
+The Event class mimics WINAPI Event Objects with use of C++11 features. For those familiar with WINAPI events the list
 below is a shortcut for all equivalent WINAPI functions:
 
 * `CreateEvent` - Create an object of `Event` class with identical arguments
@@ -29,7 +29,7 @@ is reset manually (`true`) or automatically (`false`).
 The event can be in either signaled or nonsignaled state. State of the object can always be explicitly set to signaled
 via `set()` or to nonsignaled via `reset()` functions. When the event is nonsignaled every call to `wait()` function
 is blocking for as long as the event remains in nonsignaled state. Change of the event state to signaled will
-immediatelly release all threads waiting for the object but only when event is configured for manually reset. When an
+immediately release all threads waiting for the object but only when event is configured for manually reset. When an
 event is configured to automatic reset only one of waiting threads is released and then state of the event is
 automatically switched back to nonsignaled, and, therefore all other tasks continues waiting for another signalization
 (notification).
